@@ -35,7 +35,9 @@ app.get("/", (req, res) => {
 app.get("/users", (req, res) => {
   res.send("This is users page");
 });
-
+app.get("/services", (req, res) => {
+  res.send("This is service page");
+});
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
