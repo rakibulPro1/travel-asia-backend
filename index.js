@@ -32,6 +32,9 @@ run().catch(console.dir);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+app.get("/users", (req, res) => {
+  res.send("This is users page");
+});
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
