@@ -59,6 +59,14 @@ async function run() {
       res.send(bookings);
     });
 
+    // DELETE API
+    app.delete("/booking/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await bookingCollection.deleteOne(query);
+      res.send(result);
+    });
+
     console.log("database connected");
   } finally {
     // await client.close();
